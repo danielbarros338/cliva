@@ -1,5 +1,5 @@
 <template>
-  <button @click="hide" :class="['cover', { close: isOpen }]">
+  <button v-if="show" @click="hide" :class="['cover', { close: isOpen }]">
     <h1 :class="[{ close: isOpen }]">EU SOU PORQUE NÓS SOMOS</h1>
     <img :class="[{ close: isOpen }]" :src="require('@./../../public/images/gear.svg')" alt="">
   </button>
@@ -10,13 +10,14 @@ export default {
   name: "WelcomeCover",
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      show: true
     }
   },
   methods: {
     hide() {
-      if (this.isOpen) return;
       this.isOpen = !this.isOpen;
+      setTimeout(() => this.show = false, 2000);
     }
   }
 }
@@ -31,10 +32,9 @@ h1 {
   width: 100vw;
   background-color: var(--color-primary);
   border: none;
-  transition: ease 1s all;
 }
 .close {
+  transition: ease 1s all;
   opacity: 0;
-  width: 0;
 }
 </style>

@@ -2,6 +2,13 @@
   <div class="home">
     <div @click="transformBg" :class="['container1', { bg_click: bgClick }]">
       <WelcomeCover />
+      <div v-if="activeContent">
+        <h1>Colocar logo da cliva</h1>
+        <h1>**Colocar uma playlist?**</h1>
+        <h1>VideoClipe</h1>
+        <h1>Agenda de shows</h1>
+        <h1>Capa dos EP's</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -13,7 +20,8 @@ export default {
   name: "Home",
   data() {
     return {
-      bgClick: false
+      bgClick: false,
+      activeContent: false
     }
   },
   components: {
@@ -22,6 +30,7 @@ export default {
   methods: {
     transformBg()  {
       this.bgClick = !this.bgClick;
+      setTimeout(() => this.activeContent = !this.activeContent, 2000);
     }
   }
 };
@@ -35,9 +44,12 @@ export default {
   background-size: cover;
   background-attachment: scroll;
   background-color: #fff;
-  transition: ease-out 4s all;
+  transition: ease-out 1.5s all;
 }
 .bg_click {
   background-color: var(--color-secondary);
+}
+h1 {
+  color: #fff;
 }
 </style>
