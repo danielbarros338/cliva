@@ -1,4 +1,13 @@
+:root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+}
+
 * { 
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--color-secondary);
 }
