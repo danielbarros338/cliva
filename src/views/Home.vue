@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <div @click="transformBg" :class="['container1', { bg_click: bgClick }]">
-      <WelcomeDialog />
+      <WelcomeCover />
     </div>
   </div>
 </template>
 
 <script>
-import WelcomeDialog from '@/components/WelcomeDialog'
+import WelcomeCover from '@/components/WelcomeCover'
 
 export default {
   name: "Home",
@@ -17,7 +17,7 @@ export default {
     }
   },
   components: {
-    WelcomeDialog
+    WelcomeCover
   },
   methods: {
     transformBg()  {
@@ -34,9 +34,10 @@ export default {
   background-image: url("./../../public/images/skull.svg");
   background-size: cover;
   background-attachment: scroll;
-  transition: ease-out 1s all;
+  background-color: #fff;
+  transition: ease-out 4s all;
 }
 .bg_click {
-  background-color: #fff;
+  background-color: var(--color-secondary);
 }
 </style>
