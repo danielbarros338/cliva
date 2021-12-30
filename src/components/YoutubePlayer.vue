@@ -1,8 +1,6 @@
 <template>
     <div>
         <iframe 
-          width="560" 
-          height="315" 
           src="https://www.youtube.com/embed/yaD8uLygi1g" 
           title="YouTube video player" 
           frameborder="0" 
@@ -19,5 +17,9 @@ export default {
 </script>
 
 <style scoped>
-
+ @media (max-width: 400px) {
+   iframe {
+     width: 80vw;
+   }
+ }
 </style>

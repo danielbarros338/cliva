@@ -5,7 +5,7 @@
       <div v-if="activeContent">
         <h1>Colocar logo da cliva</h1>
         <h1>**Colocar uma playlist?**</h1>
-        <h1>VideoClipe</h1>
+        <YoutubePlayer />
         <h1>Agenda de shows</h1>
         <h1>Capa dos EP's</h1>
       </div>
@@ -14,7 +14,8 @@
 </template>
 
 <script>
-import WelcomeCover from '@/components/WelcomeCover'
+import WelcomeCover from "@/components/WelcomeCover";
+import YoutubePlayer from "@/components/YoutubePlayer";
 
 export default {
   name: "Home",
@@ -25,11 +26,13 @@ export default {
     }
   },
   components: {
-    WelcomeCover
+    WelcomeCover,
+    YoutubePlayer
   },
   methods: {
     transformBg()  {
       this.bgClick = !this.bgClick;
+      if (this.activeContent) return;
       setTimeout(() => this.activeContent = !this.activeContent, 2000);
     }
   }
