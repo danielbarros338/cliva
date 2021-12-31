@@ -2,7 +2,13 @@
   <div class="home">
     <div class="container1">
       <img class="logo_cliva" :src="require('@./../../public/images/cliva.svg')" alt="Logotipo Cliva">
-      <img :style="`transform: rotate(${rotate}deg)`" class="gear" :src="require('@./../../public/images/gear.svg')" alt="Engrenagem">
+      <img
+        :style="`transform: rotate(${rotate}deg)`"
+        class="gear"
+        :src="require('@./../../public/images/gear.svg')"
+        alt="Engrenagem"
+      >
+      <h3>EU SOU PORQUE NÓS SOMOS</h3>
       <div class="portal_containers">
         <a v-for="(portal, index) of portals" :key="index" :href="portal.url">
           <img class="portal_icons" :src="require(`@./../../public/images/${portal.svg}`)" alt="Facebook">
@@ -71,11 +77,12 @@ export default {
 
 @media (max-width: 450px) {
    .container1 .gear {
-    margin: 130px 0;
+    margin: 140px 0;
     /*animation: spinner 7s linear infinite;*/
   }
   .portal_icons {
-    height: 30px;
+    height: 60px;
+    margin: 50px 0;
   }
 }
 
