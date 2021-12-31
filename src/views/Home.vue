@@ -30,6 +30,11 @@
         alt="Logotipo Cliva"
       />
       <YoutubePlayer />
+      <img
+        class="img_icaro"
+        :src="require('@./../../public/img/icaro.jpg')"
+        alt="Logotipo Cliva"
+      />
     </div>
   </div>
 </template>
@@ -105,6 +110,10 @@ export default {
   }
   .img_matheus {
     height: 32.7vh;
+  }
+  .img_icaro {
+    margin-top: -5px;
+    height: 42vh;
   }
 }
 
