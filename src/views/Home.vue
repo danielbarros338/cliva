@@ -4,7 +4,7 @@
       <img class="logoCliva" :src="require('@./../../public/images/cliva.svg')" alt="Logotipo Cliva">
       <span>
         <a>
-          <img class="portal_icons" :src="require(`@./../../public/images/instagram.svg`)" alt="Facebook">
+          <img class="portal_icons" :src="require(`@./../../public/images/youtube.svg`)" alt="Facebook">
         </a>
       </span>
     </div>
