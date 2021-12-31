@@ -1,62 +1,79 @@
 <template>
   <div class="home">
     <div class="container1">
-      <img class="logo_cliva" :src="require('@./../../public/svgs/cliva.svg')" alt="Logotipo Cliva">
+      <img
+        class="logo_cliva"
+        :src="require('@./../../public/svgs/cliva.svg')"
+        alt="Logotipo Cliva"
+      />
       <img
         :style="`transform: rotate(${rotate}deg)`"
         class="gear"
         :src="require('@./../../public/svgs/gear.svg')"
         alt="Engrenagem"
-      >
+      />
       <h3>EU SOU PORQUE NÓS SOMOS</h3>
       <div class="portal_containers">
         <a v-for="(portal, index) of portals" :key="index" :href="portal.url">
-          <img class="portal_icons" :src="require(`@./../../public/svgs/${portal.svg}`)" alt="Facebook">
+          <img
+            class="portal_icons"
+            :src="require(`@./../../public/svgs/${portal.svg}`)"
+            alt="Facebook"
+          />
         </a>
       </div>
     </div>
     <div class="container2">
-      <img class="img_matheus" :src="require('@./../../public/img/mateus2.jpg')" alt="Logotipo Cliva">
+      <img
+        class="img_matheus"
+        :src="require('@./../../public/img/mateus2.jpg')"
+        alt="Logotipo Cliva"
+      />
+      <YoutubePlayer />
     </div>
   </div>
 </template>
 
 <script>
 // import Diary from "@/components/Diary.vue";
+import YoutubePlayer from "@/components/YoutubePlayer.vue";
 
 export default {
   name: "Home",
   data() {
     return {
       portals: [
-        { 
+        {
           url: "https://www.facebook.com/bandacliva/",
-          svg: "facebook.svg"
-        },{
+          svg: "facebook.svg",
+        },
+        {
           url: "https://www.instagram.com/clivaoficial/",
-          svg: "instagram.svg"
-        },{
+          svg: "instagram.svg",
+        },
+        {
           url: "https://www.youtube.com/channel/UC97Uz26S362xo_hlusOQhMQ",
-          svg: "youtube.svg"
-        } 
+          svg: "youtube.svg",
+        },
       ],
-      rotate: 0
-    }
+      rotate: 0,
+    };
   },
   components: {
+    YoutubePlayer,
     // Diary
   },
   created() {
-    window.addEventListener('scroll', this.rotateGear);
+    window.addEventListener("scroll", this.rotateGear);
   },
   methods: {
     rotateGear() {
       if (this.rotate < window.scrollY) this.rotate++;
       if (this.rotate > window.scrollY) this.rotate--;
       this.rotate = window.scrollY;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -78,7 +95,7 @@ export default {
 }
 
 @media (max-width: 450px) {
-   .container1 .gear {
+  .container1 .gear {
     margin: 140px 0;
     /*animation: spinner 7s linear infinite;*/
   }

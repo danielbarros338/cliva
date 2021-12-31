@@ -1,7 +1,11 @@
 <template>
   <button v-if="show" @click="hide" :class="['cover', { close: isOpen }]">
     <h1 :class="[{ close: isOpen }]">EU SOU PORQUE NÓS SOMOS</h1>
-    <img :class="[{ close: isOpen }]" :src="require('@./../../public/images/gear.svg')" alt="">
+    <img
+      :class="[{ close: isOpen }]"
+      :src="require('@./../../public/images/gear.svg')"
+      alt=""
+    />
   </button>
 </template>
 
@@ -11,8 +15,8 @@ export default {
   data() {
     return {
       isOpen: false,
-      show: true
-    }
+      show: true,
+    };
   },
   methods: {
     hide() {
@@ -20,9 +24,9 @@ export default {
       setTimeout(() => {
         this.$router.push("home");
       }, 400);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

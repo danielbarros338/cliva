@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 
 // Global Style
-import "@/assets/index.css"
+import "@/assets/index.css";
 
 Vue.config.productionTip = false;
 
