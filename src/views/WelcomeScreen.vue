@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "WelcomeCover",
+  name: "WelcomeScreen",
   data() {
     return {
       isOpen: false,
@@ -17,7 +17,9 @@ export default {
   methods: {
     hide() {
       this.isOpen = !this.isOpen;
-      setTimeout(() => this.show = false, 2000);
+      setTimeout(() => {
+        this.$router.push("home");
+      }, 400);
     }
   }
 }

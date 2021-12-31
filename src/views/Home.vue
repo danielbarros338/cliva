@@ -1,58 +1,34 @@
 <template>
   <div class="home">
-    <div @click="transformBg" :class="['container1', { bg_click: bgClick }]">
-      <WelcomeCover />
-      <div v-if="activeContent">
-        <h1>Colocar logo da cliva</h1>
-        <h1>**Colocar uma playlist?**</h1>
-        <YoutubePlayer />
-        <h1>Agenda de shows</h1>
-        <h1>Capa dos EP's</h1>
-      </div>
+    <div class="container1">
+      <img class="logoCliva" :src="require('@./../../public/images/cliva.svg')" alt="Logotipo Cliva">
+      <Diary />
     </div>
   </div>
 </template>
 
 <script>
-import WelcomeCover from "@/components/WelcomeCover";
-import YoutubePlayer from "@/components/YoutubePlayer";
+import Diary from "@/components/Diary.vue";
 
 export default {
   name: "Home",
-  data() {
-    return {
-      bgClick: false,
-      activeContent: false
-    }
-  },
   components: {
-    WelcomeCover,
-    YoutubePlayer
-  },
-  methods: {
-    transformBg()  {
-      this.bgClick = !this.bgClick;
-      if (this.activeContent) return;
-      setTimeout(() => this.activeContent = !this.activeContent, 2000);
-    }
+    Diary
   }
-};
+}
 </script>
 
 <style scoped>
 .container1 {
-  height: 100vh;
+  background-color: var(--color-primary);
+}
+.container1 img {
   width: 100vw;
-  background-image: url("./../../public/images/skull.svg");
-  background-size: cover;
-  background-attachment: scroll;
-  background-color: #fff;
-  transition: ease-out 1.5s all;
 }
-.bg_click {
-  background-color: var(--color-secondary);
-}
-h1 {
-  color: #fff;
+
+@media (min-width: 1000px) {
+  .container1 img {
+    height: 30vh;
+  }
 }
 </style>
