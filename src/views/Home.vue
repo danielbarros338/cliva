@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <div class="container1">
-      <img class="logo_cliva" :src="require('@./../../public/images/cliva.svg')" alt="Logotipo Cliva">
+      <img class="logo_cliva" :src="require('@./../../public/svgs/cliva.svg')" alt="Logotipo Cliva">
       <img
         :style="`transform: rotate(${rotate}deg)`"
         class="gear"
-        :src="require('@./../../public/images/gear.svg')"
+        :src="require('@./../../public/svgs/gear.svg')"
         alt="Engrenagem"
       >
       <h3>EU SOU PORQUE NÓS SOMOS</h3>
       <div class="portal_containers">
         <a v-for="(portal, index) of portals" :key="index" :href="portal.url">
-          <img class="portal_icons" :src="require(`@./../../public/images/${portal.svg}`)" alt="Facebook">
+          <img class="portal_icons" :src="require(`@./../../public/svgs/${portal.svg}`)" alt="Facebook">
         </a>
       </div>
     </div>
