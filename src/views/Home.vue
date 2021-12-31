@@ -15,7 +15,9 @@
         </a>
       </div>
     </div>
-    <div class="container2"></div>
+    <div class="container2">
+      <img class="img_matheus" :src="require('@./../../public/img/mateus2.jpg')" alt="Logotipo Cliva">
+    </div>
   </div>
 </template>
 
@@ -83,6 +85,9 @@ export default {
   .portal_icons {
     height: 60px;
     margin: 50px 0;
+  }
+  .img_matheus {
+    height: 32.7vh;
   }
 }
 
