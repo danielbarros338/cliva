@@ -65,7 +65,7 @@ export default {
   }
   .img_icaro {
     margin-top: -5px;
-    height: 42vh;
+    height: 42.5vh;
   }
   .container3 {
     margin-top: -7px;

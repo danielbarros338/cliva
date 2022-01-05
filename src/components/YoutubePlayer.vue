@@ -19,7 +19,8 @@ export default {
 <style scoped>
 @media (max-width: 400px) {
   iframe {
-    margin-top: -5px;
+    margin-top: -6px;
+    margin-bottom: -1px;
     height: 30vh;
     width: 100vw;
   }
