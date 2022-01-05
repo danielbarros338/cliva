@@ -3,7 +3,6 @@
     <div class="container1">
       <WelcomeScreen :gear-rotate="rotate" />
     </div>
-
     <div class="container2">
       <img
         class="img_matheus"
@@ -17,11 +16,14 @@
         alt="Logotipo Cliva"
       />
     </div>
+    <div class="container3">
+      <Diary />
+    </div>
   </div>
 </template>
 
 <script>
-// import Diary from "@/components/Diary.vue";
+import Diary from "@/components/Diary.vue";
 import YoutubePlayer from "@/components/YoutubePlayer.vue";
 import WelcomeScreen from "@/components/WelcomeScreen.vue";
 
@@ -35,7 +37,7 @@ export default {
   components: {
     YoutubePlayer,
     WelcomeScreen,
-    // Diary
+    Diary
   },
   created() {
     window.addEventListener("scroll", this.rotateGear);
@@ -57,9 +59,6 @@ export default {
 .container1 {
   background-color: var(--color-primary);
 }
-.container2 {
-  height: 500px;
-}
 @media (max-width: 450px) {
   .img_matheus {
     height: 32.7vh;
@@ -67,6 +66,9 @@ export default {
   .img_icaro {
     margin-top: -5px;
     height: 42vh;
+  }
+  .container3 {
+    margin-top: -7px;
   }
 }
 
