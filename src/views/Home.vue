@@ -19,6 +19,12 @@
     <div class="container3">
       <Diary />
     </div>
+    <div class="footer">
+      <p>
+        Cliva Oficial <img class="copy" :src="require('@./../../public/svgs/copyrights.svg')" /> 
+        | Todos os direitos reservados.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -58,6 +64,10 @@ export default {
 }*/
 .container1 {
   background-color: var(--color-primary);
+}
+.copy {
+  height: 10px;
+  margin-bottom: 2px;
 }
 @media (max-width: 450px) {
   .img_matheus {
