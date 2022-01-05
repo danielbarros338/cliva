@@ -70,6 +70,9 @@ export default {
   height: 10px;
   margin-bottom: 2px;
 }
+.footer {
+  background-color: var(--color-primary);
+}
 @media (max-width: 450px) {
   .img_matheus {
     height: 32.7vh;

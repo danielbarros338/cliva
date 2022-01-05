@@ -37,7 +37,7 @@ export default {};
 td,
 th {
   border-bottom: 1px solid #fff;
-  padding: 5px 0;
+  padding-top: 10px;
 }
 table {
   border-collapse: collapse;
