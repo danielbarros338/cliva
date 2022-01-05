@@ -91,4 +91,11 @@ export default {
     height: 30vh;
   }
 }
+@media (min-width: 500px) {
+  .container1,
+  .container2,
+  .container3 {
+    display: none;
+  }
+}
 </style>
