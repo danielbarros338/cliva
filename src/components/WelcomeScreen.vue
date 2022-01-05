@@ -29,7 +29,7 @@ export default {
   name: "WelcomeScreen",
   data() {
     return {
-       portals: [
+      portals: [
         {
           url: "https://www.facebook.com/bandacliva/",
           svg: "facebook.svg",
@@ -43,14 +43,14 @@ export default {
           svg: "youtube.svg",
         },
       ],
-    }
+    };
   },
   props: {
     gearRotate: {
       type: Number,
-      default: 0
-    }
-  }
+      default: 0,
+    },
+  },
 };
 </script>
 

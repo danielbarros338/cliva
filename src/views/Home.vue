@@ -21,8 +21,11 @@
     </div>
     <div class="footer">
       <p>
-        Cliva Oficial 
-        <img class="copy" :src="require('@./../../public/svgs/copyrights.svg')" /> 
+        Cliva Oficial
+        <img
+          class="copy"
+          :src="require('@./../../public/svgs/copyrights.svg')"
+        />
         | Todos os direitos reservados.
       </p>
     </div>
@@ -44,7 +47,7 @@ export default {
   components: {
     YoutubePlayer,
     WelcomeScreen,
-    Diary
+    Diary,
   },
   created() {
     window.addEventListener("scroll", this.rotateGear);
@@ -75,22 +78,19 @@ export default {
 }
 @media (max-width: 450px) {
   .img_matheus {
-    height: 32.7vh;
+    width: 100%;
+    height: auto;
   }
   .img_icaro {
     margin-top: -5px;
-    height: 42.5vh;
+    width: 100%;
+    height: auto;
   }
   .container3 {
     margin-top: -7px;
   }
 }
 
-@media (min-width: 1000px) {
-  .container1 img {
-    height: 30vh;
-  }
-}
 @media (min-width: 500px) {
   .container1,
   .container2,
