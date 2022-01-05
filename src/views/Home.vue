@@ -2,27 +2,6 @@
   <div class="home">
     <div class="container1">
       <WelcomeScreen :gear-rotate="rotate" />
-      <!-- <img
-        class="logo_cliva"
-        :src="require('@./../../public/svgs/cliva.svg')"
-        alt="Logotipo Cliva"
-      />
-      <img
-        :style="`transform: rotate(${rotate}deg)`"
-        class="gear"
-        :src="require('@./../../public/svgs/gear.svg')"
-        alt="Engrenagem"
-      />
-      <h3>EU SOU PORQUE NÓS SOMOS</h3>
-      <div class="portal_containers">
-        <a v-for="(portal, index) of portals" :key="index" :href="portal.url">
-          <img
-            class="portal_icons"
-            :src="require(`@./../../public/svgs/${portal.svg}`)"
-            alt="Facebook"
-          />
-        </a>
-      </div> -->
     </div>
 
     <div class="container2">
@@ -44,7 +23,7 @@
 <script>
 // import Diary from "@/components/Diary.vue";
 import YoutubePlayer from "@/components/YoutubePlayer.vue";
-import WelcomeScreen from "@/views/WelcomeScreen.vue";
+import WelcomeScreen from "@/components/WelcomeScreen.vue";
 
 export default {
   name: "Home",
