@@ -1,12 +1,27 @@
 <template>
-  <button v-if="show" @click="hide" :class="['cover', { close: isOpen }]">
-    <h1 :class="[{ close: isOpen }]">EU SOU PORQUE NÓS SOMOS</h1>
+  <div class="container">
     <img
-      :class="[{ close: isOpen }]"
-      :src="require('@./../../public/images/gear.svg')"
-      alt=""
+      class="logo_cliva"
+      :src="require('@./../../public/svgs/cliva.svg')"
+      alt="Logotipo Cliva"
     />
-  </button>
+    <img
+      :style="`transform: rotate(${gearRotate}deg)`"
+      class="gear"
+      :src="require('@./../../public/svgs/gear.svg')"
+      alt="Engrenagem"
+    />
+    <h3>EU SOU PORQUE NÓS SOMOS</h3>
+    <div class="portal_containers">
+      <a v-for="(portal, index) of portals" :key="index" :href="portal.url">
+        <img
+          class="portal_icons"
+          :src="require(`@./../../public/svgs/${portal.svg}`)"
+          alt="Facebook"
+        />
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,33 +29,53 @@ export default {
   name: "WelcomeScreen",
   data() {
     return {
-      isOpen: false,
-      show: true,
-    };
+       portals: [
+        {
+          url: "https://www.facebook.com/bandacliva/",
+          svg: "facebook.svg",
+        },
+        {
+          url: "https://www.instagram.com/clivaoficial/",
+          svg: "instagram.svg",
+        },
+        {
+          url: "https://www.youtube.com/channel/UC97Uz26S362xo_hlusOQhMQ",
+          svg: "youtube.svg",
+        },
+      ],
+    }
   },
-  methods: {
-    hide() {
-      this.isOpen = !this.isOpen;
-      setTimeout(() => {
-        this.$router.push("home");
-      }, 400);
-    },
-  },
+  props: {
+    gearRotate: {
+      type: Number,
+      default: 0
+    }
+  }
 };
 </script>
 
 <style scoped>
-h1 {
-  color: #fff;
-}
-.cover {
-  height: 100vh;
+.container .logo_cliva {
   width: 100vw;
-  background-color: var(--color-primary);
-  border: none;
 }
-.close {
-  transition: ease 1s all;
-  opacity: 0;
+.portal_containers {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 450px) {
+  .container .gear {
+    margin: 140px 0;
+    /*animation: spinner 7s linear infinite;*/
+  }
+  .portal_icons {
+    height: 60px;
+    margin: 50px 0;
+  }
+}
+@media (min-width: 1000px) {
+  .container img {
+    height: 30vh;
+  }
 }
 </style>

@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <div class="container1">
-      <img
+      <WelcomeScreen :gear-rotate="rotate" />
+      <!-- <img
         class="logo_cliva"
         :src="require('@./../../public/svgs/cliva.svg')"
         alt="Logotipo Cliva"
@@ -21,8 +22,9 @@
             alt="Facebook"
           />
         </a>
-      </div>
+      </div> -->
     </div>
+
     <div class="container2">
       <img
         class="img_matheus"
@@ -42,30 +44,18 @@
 <script>
 // import Diary from "@/components/Diary.vue";
 import YoutubePlayer from "@/components/YoutubePlayer.vue";
+import WelcomeScreen from "@/views/WelcomeScreen.vue";
 
 export default {
   name: "Home",
   data() {
     return {
-      portals: [
-        {
-          url: "https://www.facebook.com/bandacliva/",
-          svg: "facebook.svg",
-        },
-        {
-          url: "https://www.instagram.com/clivaoficial/",
-          svg: "instagram.svg",
-        },
-        {
-          url: "https://www.youtube.com/channel/UC97Uz26S362xo_hlusOQhMQ",
-          svg: "youtube.svg",
-        },
-      ],
       rotate: 0,
     };
   },
   components: {
     YoutubePlayer,
+    WelcomeScreen,
     // Diary
   },
   created() {
@@ -88,26 +78,10 @@ export default {
 .container1 {
   background-color: var(--color-primary);
 }
-.container1 .logo_cliva {
-  width: 100vw;
-}
 .container2 {
   height: 500px;
 }
-.portal_containers {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 @media (max-width: 450px) {
-  .container1 .gear {
-    margin: 140px 0;
-    /*animation: spinner 7s linear infinite;*/
-  }
-  .portal_icons {
-    height: 60px;
-    margin: 50px 0;
-  }
   .img_matheus {
     height: 32.7vh;
   }
