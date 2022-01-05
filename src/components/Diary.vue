@@ -21,6 +21,9 @@ export default {};
 </script>
 
 <style scoped>
+.container {
+  background-color: var(--color-primary);
+}
 @media (max-width: 450px) {
   .container_shows {
     margin-top: 20px;
