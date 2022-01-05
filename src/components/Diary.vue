@@ -13,6 +13,7 @@
         </tr>
       </table>
     </div>
+    <img class="last_img" :src="require('./../../public/img/euSouPQNosSomos.jpg')">
   </div>
 </template>
 
@@ -23,10 +24,30 @@ export default {};
 <style scoped>
 .container {
   background-color: var(--color-primary);
+  background-image: url("./../../public/img/skull.jpg");
+}
+.container_shows,
+.container h1 {
+  background-color: #000;
+  opacity: 0.9;
+}
+.last_img {
+  width: 100vw;
+}
+td,
+th {
+  border-bottom: 1px solid #fff;
+  padding: 5px 0;
+}
+table {
+  border-collapse: collapse;
 }
 @media (max-width: 450px) {
+  .container h1 {
+    padding-top: 20px;
+  }
   .container_shows {
-    margin-top: 20px;
+    padding: 20px 0;
   }
   .container_shows,
   .container_shows table {
@@ -37,6 +58,9 @@ export default {};
   }
   .container_shows td {
     text-align: center;
+  }
+  .last_img {
+    margin-bottom: -7px;
   }
 }
 </style>
