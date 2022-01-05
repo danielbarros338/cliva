@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   iframe {
     margin-top: -6px;
     margin-bottom: -1px;

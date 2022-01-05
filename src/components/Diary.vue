@@ -13,7 +13,10 @@
         </tr>
       </table>
     </div>
-    <img class="last_img" :src="require('./../../public/img/euSouPQNosSomos.jpg')">
+    <img
+      class="last_img"
+      :src="require('./../../public/img/euSouPQNosSomos.jpg')"
+    />
   </div>
 </template>
 
@@ -53,7 +56,7 @@ table {
   .container_shows table {
     width: 100vw;
   }
-  .container_shows th{
+  .container_shows th {
     text-align: start;
   }
   .container_shows td {
