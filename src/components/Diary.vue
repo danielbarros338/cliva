@@ -3,13 +3,9 @@
     <h1>Próximos shows</h1>
     <div class="container_shows">
       <table>
-        <tr>
-          <th>Lethal Death Fest</th>
-          <td>Rock Experience - Lapa, RJ</td>
-        </tr>
-        <tr>
-          <th>Festival Transborde</th>
-          <td>Santa Cruz, RJ</td>
+        <tr v-for="show of shows" :key="show.id">
+          <th>{{ show.nameFestival }}</th>
+          <td>{{ show.local }} | {{ show.date }}</td>
         </tr>
       </table>
     </div>
@@ -21,7 +17,31 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Diary",
+  data() {
+    return {
+      id: 0,
+      shows: [{
+        id: 0,
+        nameFestival: "Lethal Death Fest",
+        date: "22 - Jan - 22",
+        local: "Rock Experience - Lapa, RJ"
+      },{
+        id: 0,
+        nameFestival: "Festival Transborde",
+        date: "05 - Mar - 22",
+        local: "Santa Cruz - RJ"
+      }]
+    }
+  },
+  created() {
+    for (let show of this.shows) {
+      show.id = this.id;
+      this.id++;
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -63,10 +83,10 @@ table {
     width: 100vw;
   }
   .container_shows th {
-    text-align: start;
+    font-size: 13px;
   }
   .container_shows td {
-    text-align: center;
+    font-size: 13px;
   }
 }
 @media (min-width: 450px) {

@@ -88,6 +88,9 @@ export default {
   .img_icaro {
     margin-top: -5px;
   }
+  .footer {
+    margin-top: -7px;
+  }
 }
 
 @media (min-width: 450px) {
