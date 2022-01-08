@@ -31,6 +31,8 @@ export default {};
 }
 .container_shows,
 .container h1 {
+  display: flex;
+  justify-content: center;
   background-color: #000;
   opacity: 0.9;
 }
@@ -42,7 +44,14 @@ th {
   border-bottom: 1px solid #fff;
   padding-top: 10px;
 }
+th {
+  text-align: left;
+}
+td {
+  text-align: right;
+}
 table {
+  width: 90%;
   border-collapse: collapse;
 }
 @media (max-width: 450px) {
@@ -51,9 +60,6 @@ table {
   }
   .container_shows {
     padding: 20px 0;
-  }
-  .container_shows,
-  .container_shows table {
     width: 100vw;
   }
   .container_shows th {
@@ -62,8 +68,14 @@ table {
   .container_shows td {
     text-align: center;
   }
-  .last_img {
+}
+@media (min-width: 450px) {
+  .container {
     margin-bottom: -7px;
+  }
+  .container_shows {
+    width: 100vw;
+    padding: 30px 0;
   }
 }
 </style>
