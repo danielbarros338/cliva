@@ -100,7 +100,6 @@ export default {
   .container3 {
     margin-top: -7px;
   }
-  
 }
 
 @media (min-width: 1000px) {

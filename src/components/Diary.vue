@@ -22,25 +22,28 @@ export default {
   data() {
     return {
       id: 0,
-      shows: [{
-        id: 0,
-        nameFestival: "Lethal Death Fest",
-        date: "22 - Jan - 22",
-        local: "Rock Experience - Lapa, RJ"
-      },{
-        id: 0,
-        nameFestival: "Festival Transborde",
-        date: "05 - Mar - 22",
-        local: "Santa Cruz - RJ"
-      }]
-    }
+      shows: [
+        {
+          id: 0,
+          nameFestival: "Lethal Death Fest",
+          date: "22 - Jan - 22",
+          local: "Rock Experience - Lapa, RJ",
+        },
+        {
+          id: 0,
+          nameFestival: "Festival Transborde",
+          date: "05 - Mar - 22",
+          local: "Santa Cruz - RJ",
+        },
+      ],
+    };
   },
   created() {
     for (let show of this.shows) {
       show.id = this.id;
       this.id++;
     }
-  }
+  },
 };
 </script>
 

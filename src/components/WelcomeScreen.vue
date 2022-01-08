@@ -73,9 +73,13 @@ export default {
     margin: 50px 0;
   }
 }
-@media (min-width: 1000px) {
-  .container img {
-    height: 30vh;
+@media (min-width: 450px) {
+  .container .gear {
+    margin: 140px 0;
+  }
+  .portal_icons {
+    height: 80px;
+    margin: 50px 0;
   }
 }
 </style>
