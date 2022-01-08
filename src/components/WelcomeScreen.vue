@@ -88,10 +88,18 @@ export default {
     height: 80px;
     margin: 50px 0;
   }
+   .container .gear {
+    height: 200px;
+    /*animation: spinner 7s linear infinite;*/
+  }
 }
 @media (min-width: 650px) {
   .container .logo_cliva {
     width: 98vw;
+  }
+   .container .gear {
+    height: 300px;
+    /*animation: spinner 7s linear infinite;*/
   }
 }
 @media (min-width: 1000px) { 
