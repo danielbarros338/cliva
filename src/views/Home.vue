@@ -73,29 +73,31 @@ export default {
   height: 10px;
   margin-bottom: 2px;
 }
+.img_matheus,
+.img_icaro {
+  width: 100%;
+  height: auto;
+}
 .footer {
   background-color: var(--color-primary);
 }
 @media (max-width: 450px) {
-  .img_matheus {
-    width: 100%;
-    height: auto;
-  }
-  .img_icaro {
-    margin-top: -5px;
-    width: 100%;
-    height: auto;
-  }
   .container3 {
     margin-top: -7px;
   }
+  .img_icaro {
+    margin-top: -5px;
+  }
+  .footer {
+    margin-top: -7px;
+  }
 }
-
-@media (min-width: 500px) {
-  .container1,
-  .container2,
+@media (min-width: 450px) {
+  .img_icaro {
+    margin-top: -6px;
+  }
   .container3 {
-    display: none;
+    margin-top: -7px;
   }
 }
 </style>

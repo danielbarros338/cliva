@@ -2,16 +2,16 @@
   <div class="container">
     <img
       class="logo_cliva"
-      :src="require('@./../../public/svgs/cliva.svg')"
+      :src="require(`@./../../public${imgs[0].urlPrin}`)"
       alt="Logotipo Cliva"
     />
     <img
       :style="`transform: rotate(${gearRotate}deg)`"
       class="gear"
-      :src="require('@./../../public/svgs/gear.svg')"
+      :src="require(`@./../../public${imgs[1].urlPrin}`)"
       alt="Engrenagem"
     />
-    <h3>EU SOU PORQUE NÓS SOMOS</h3>
+    <h3 class="phrase_ubuntu">EU SOU PORQUE NÓS SOMOS</h3>
     <div class="portal_containers">
       <a v-for="(portal, index) of portals" :key="index" :href="portal.url">
         <img
@@ -43,6 +43,13 @@ export default {
           svg: "youtube.svg",
         },
       ],
+      imgs: [
+        {
+          urlPrin: "/svgs/cliva.svg"
+        },{
+          urlPrin: "/svgs/gear.svg"
+        }
+      ]
     };
   },
   props: {
@@ -73,9 +80,42 @@ export default {
     margin: 50px 0;
   }
 }
-@media (min-width: 1000px) {
-  .container img {
-    height: 30vh;
+@media (min-width: 450px) {
+  .container .gear {
+    margin: 140px 0;
+  }
+  .portal_icons {
+    height: 80px;
+    margin: 50px 0;
+  }
+   .container .gear {
+    height: 200px;
+    /*animation: spinner 7s linear infinite;*/
+  }
+}
+@media (min-width: 650px) {
+  .container .logo_cliva {
+    width: 98vw;
+  }
+   .container .gear {
+    height: 300px;
+    /*animation: spinner 7s linear infinite;*/
+  }
+}
+@media (min-width: 1000px) { 
+  .container .logo_cliva {
+    width: 98.7vw;
+  }
+  .container .gear {
+    height: 400px;
+    /*animation: spinner 7s linear infinite;*/
+  }
+  .portal_icons {
+    height: 170px;
+    margin: 70px 0;
+  }
+  .phrase_ubuntu {
+    font-size: 56px;
   }
 }
 </style>
