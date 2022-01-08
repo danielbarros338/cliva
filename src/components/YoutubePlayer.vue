@@ -25,7 +25,6 @@ export default {
     width: 100%;
   }
 }
-
 @media (min-width: 450px) {
   iframe {
     margin: -6px 0;
@@ -33,4 +32,12 @@ export default {
     width: 100%;
   }
 }
+@media (min-width: 650px) {
+  iframe {
+    margin: -6px 0;
+    height: 500px;
+    width: 100%;
+  }
+}
+
 </style>

@@ -99,6 +99,23 @@ table {
   .container_shows {
     width: 100vw;
     padding: 30px 0;
+    box-shadow: 0 0 1px #000;
+  }
+}
+@media (min-width: 650px) {
+  .container_shows {
+    width: 100vw;
+    padding: 50px 0;
+  }
+  .last_img,
+  .container_shows {
+    width: 98vw;
+  }
+}
+@media (min-width: 100px) {
+  .last_img,
+  .container_shows {
+    width: 98.7vw;
   }
 }
 </style>
