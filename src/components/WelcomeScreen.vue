@@ -2,13 +2,13 @@
   <div class="container">
     <img
       class="logo_cliva"
-      :src="require(`@./../../public/svgs/cliva.svg`)"
+      :src="require('@./../../public/svgs/cliva.svg')"
       alt="Logotipo Cliva"
     />
     <img
       :style="`transform: rotate(${gearRotate}deg)`"
       class="gear"
-      :src="require(`@./../../public/svgs/gear.svg`)"
+      :src="require('@./../../public/svgs/gear.svg')"
       alt="Engrenagem"
     />
     <h3 class="phrase_ubuntu">EU SOU PORQUE NÓS SOMOS</h3>

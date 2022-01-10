@@ -6,13 +6,13 @@
     <div class="container2">
       <img
         class="img_matheus"
-        :src="require('@./../../public/img/mateus2.jpg')"
+        :src="require(`@./../../public/img/${imgs[0].img}`)"
         alt="Logotipo Cliva"
       />
       <YoutubePlayer />
       <img
         class="img_icaro"
-        :src="require('@./../../public/img/icaro.jpg')"
+        :src="require(`@./../../public/img/${imgs[1].img}`)"
         alt="Logotipo Cliva"
       />
     </div>
@@ -42,6 +42,14 @@ export default {
   data() {
     return {
       rotate: 0,
+      imgs: [
+        {
+          img: "mateus2.jpg",
+        },
+        {
+          img: "icaro.jpg",
+        },
+      ],
     };
   },
   components: {
@@ -51,12 +59,23 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.rotateGear);
+    this.checkScreen();
+  },
+  updated() {
+    this.checkScreen();
   },
   methods: {
     rotateGear() {
       if (this.rotate < window.scrollY) this.rotate++;
       if (this.rotate > window.scrollY) this.rotate--;
       this.rotate = window.scrollY;
+    },
+    checkScreen() {
+      window.innerWidth >= 1000
+        ? (this.imgs[0].img = "mateusLg.jpg")(
+            (this.imgs[1].img = "icaroLg.jpg")
+          )
+        : (this.imgs[0].img = "mateus2.jpg")((this.imgs[1].img = "icaro.jpg"));
     },
   },
 };
