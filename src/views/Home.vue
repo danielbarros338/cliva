@@ -6,13 +6,13 @@
     <div class="container2">
       <img
         class="img_matheus"
-        :src="require('@./../../public/img/mateus2.jpg')"
+        :src="require(`@./../../public/img/${imgs[0].img}`)"
         alt="Logotipo Cliva"
       />
       <YoutubePlayer />
       <img
         class="img_icaro"
-        :src="require('@./../../public/img/icaro.jpg')"
+        :src="require(`@./../../public/img/${imgs[1].img}`)"
         alt="Logotipo Cliva"
       />
     </div>
@@ -29,6 +29,10 @@
         | Todos os direitos reservados.
       </p>
     </div>
+    <div class="desktop_build">
+      <h1>VERSÃO PARA DESKTOP EM DESENVOLVIMENTO</h1>
+      <h3>PARA MELHOR EXPERIÊNCIA, ACESSE PELO SEU CELULAR</h3>
+    </div>
   </div>
 </template>
 
@@ -42,6 +46,14 @@ export default {
   data() {
     return {
       rotate: 0,
+      imgs: [
+        {
+          img: "mateus2.jpg",
+        },
+        {
+          img: "icaro.jpg"
+        }
+      ],
     };
   },
   components: {
@@ -51,12 +63,23 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.rotateGear);
+    this.checkScreen();
+  },
+  updated() {
+    this.checkScreen();
   },
   methods: {
     rotateGear() {
       if (this.rotate < window.scrollY) this.rotate++;
       if (this.rotate > window.scrollY) this.rotate--;
       this.rotate = window.scrollY;
+    },
+    checkScreen() {
+      window.innerWidth >= 1000
+        ? ( this.imgs[0].img = "mateusLg.jpg" )
+          ( this.imgs[1].img = "icaroLg.jpg" )
+        : ( this.imgs[0].img = "mateus2.jpg" )
+          ( this.imgs[1].img = "icaro.jpg" );
     },
   },
 };
@@ -81,6 +104,9 @@ export default {
 .footer {
   background-color: var(--color-primary);
 }
+.desktop_build {
+  display: none;
+}
 @media (max-width: 450px) {
   .container3 {
     margin-top: -7px;
@@ -98,6 +124,17 @@ export default {
   }
   .container3 {
     margin-top: -7px;
+  }
+}
+@media (min-width: 1200px) {
+  .container1,
+  .container2,
+  .container3,
+  .footer {
+    display: none;
+  }
+  .desktop_build {
+    display: block;
   }
 }
 </style>

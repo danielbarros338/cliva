@@ -2,13 +2,13 @@
   <div class="container">
     <img
       class="logo_cliva"
-      :src="require(`@./../../public${imgs[0].urlPrin}`)"
+      :src="require('@./../../public/svgs/cliva.svg')"
       alt="Logotipo Cliva"
     />
     <img
       :style="`transform: rotate(${gearRotate}deg)`"
       class="gear"
-      :src="require(`@./../../public${imgs[1].urlPrin}`)"
+      :src="require('@./../../public/svgs/gear.svg')"
       alt="Engrenagem"
     />
     <h3 class="phrase_ubuntu">EU SOU PORQUE NÓS SOMOS</h3>
@@ -43,13 +43,6 @@ export default {
           svg: "youtube.svg",
         },
       ],
-      imgs: [
-        {
-          urlPrin: "/svgs/cliva.svg"
-        },{
-          urlPrin: "/svgs/gear.svg"
-        }
-      ]
     };
   },
   props: {
@@ -88,7 +81,7 @@ export default {
     height: 80px;
     margin: 50px 0;
   }
-   .container .gear {
+  .container .gear {
     height: 200px;
     /*animation: spinner 7s linear infinite;*/
   }
@@ -97,12 +90,12 @@ export default {
   .container .logo_cliva {
     width: 98vw;
   }
-   .container .gear {
+  .container .gear {
     height: 300px;
     /*animation: spinner 7s linear infinite;*/
   }
 }
-@media (min-width: 1000px) { 
+@media (min-width: 1000px) {
   .container .logo_cliva {
     width: 98.7vw;
   }
