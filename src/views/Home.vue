@@ -47,8 +47,8 @@ export default {
           img: "mateus2.jpg",
         },
         {
-          img: "icaro.jpg",
-        },
+          img: "icaro.jpg"
+        }
       ],
     };
   },
@@ -72,10 +72,10 @@ export default {
     },
     checkScreen() {
       window.innerWidth >= 1000
-        ? (this.imgs[0].img = "mateusLg.jpg")(
-            (this.imgs[1].img = "icaroLg.jpg")
-          )
-        : (this.imgs[0].img = "mateus2.jpg")((this.imgs[1].img = "icaro.jpg"));
+        ? ( this.imgs[0].img = "mateusLg.jpg" )
+          ( this.imgs[1].img = "icaroLg.jpg" )
+        : ( this.imgs[0].img = "mateus2.jpg" )
+          ( this.imgs[1].img = "icaro.jpg" );
     },
   },
 };

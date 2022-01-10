@@ -51,6 +51,7 @@ export default {
 .container {
   background-color: var(--color-primary);
   background-image: url("./../../public/img/skull.jpg");
+  background-size: cover;
 }
 .container_shows,
 .container h1 {
