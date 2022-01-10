@@ -29,6 +29,10 @@
         | Todos os direitos reservados.
       </p>
     </div>
+    <div class="desktop_build">
+      <h1>VERSÃO PARA DESKTOP EM DESENVOLVIMENTO</h1>
+      <h3>PARA MELHOR EXPERIÊNCIA, ACESSE PELO SEU CELULAR</h3>
+    </div>
   </div>
 </template>
 
@@ -100,6 +104,9 @@ export default {
 .footer {
   background-color: var(--color-primary);
 }
+.desktop_build {
+  display: none;
+}
 @media (max-width: 450px) {
   .container3 {
     margin-top: -7px;
@@ -117,6 +124,17 @@ export default {
   }
   .container3 {
     margin-top: -7px;
+  }
+}
+@media (min-width: 1200px) {
+  .container1,
+  .container2,
+  .container3,
+  .footer {
+    display: none;
+  }
+  .desktop_build {
+    display: block;
   }
 }
 </style>
